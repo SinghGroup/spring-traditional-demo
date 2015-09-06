@@ -11,6 +11,6 @@
     <title></title>
 </head>
 <body>
-logout
+You have successfully logged out!!
 </body>
 </html>

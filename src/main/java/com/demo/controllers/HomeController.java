@@ -2,6 +2,7 @@ package com.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by deepak singh on 06-Sep-15.
@@ -21,5 +22,11 @@ public class HomeController {
     @RequestMapping("/logout")
     public String logout(){
         return "logout";
+    }
+
+    @RequestMapping("/test")
+    @ResponseBody //For returning text rather a view page
+    public String test(){
+        return "Test Working";
     }
 }

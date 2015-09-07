@@ -1,5 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.demo</groupId>
     <artifactId>spring-traditional-demo</artifactId>
@@ -8,14 +9,19 @@
     <name>spring-traditional-demo Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
+    <!--Properties for version used in dependencies-->
     <properties>
         <javax.servlet.api.version>2.5</javax.servlet.api.version>
         <javax.servlet.jsp.version>2.1</javax.servlet.jsp.version>
         <javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
+
         <org.springframework.version>4.2.1.RELEASE</org.springframework.version>
+
         <junit.version>3.8.1</junit.version>
+
         <org.slf4j-version>1.7.12</org.slf4j-version>
         <log4j.version>1.2.17</log4j.version>
+
         <hibernate.version>4.1.9.Final</hibernate.version>
         <commons.dbcp2.version>2.1.1</commons.dbcp2.version>
         <oracle.version>11.2.0.3</oracle.version>
@@ -30,12 +36,14 @@
             <version>${javax.servlet.api.version}</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
             <version>${javax.servlet.jsp.version}</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -74,18 +82,21 @@
             <artifactId>slf4j-api</artifactId>
             <version>${org.slf4j-version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${org.slf4j-version}</version>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${org.slf4j-version}</version>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -110,12 +121,14 @@
             </exclusions>
             <scope>runtime</scope>
         </dependency>
+
         <!--ORM-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
@@ -135,7 +148,6 @@
         </dependency>
 
         <!--Testing-->
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
@@ -164,12 +176,14 @@
                     <compilerVersion>1.8</compilerVersion>
                 </configuration>
             </plugin>
+
             <plugin>
                 <!--This plugin is used to create war build -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
             </plugin>
+
             <plugin>
                 <!--This plugin is used to deploy changes without context drop-->
                 <groupId>org.springframework</groupId>

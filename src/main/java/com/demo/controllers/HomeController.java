@@ -12,4 +12,14 @@ public class HomeController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/welcome")
+    public String welcome(){
+        return "welcome";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(){
+        return "logout";
+    }
 }
